@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeCategoryController;
+use App\Http\Controllers\HomePostDetailsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class,'homeIndex']);
+Route::get('/category', [HomeCategoryController::class,'homeIndex']);
+Route::get('/post-details', [HomePostDetailsController::class,'postIndex']);
