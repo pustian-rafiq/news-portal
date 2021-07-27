@@ -7,3 +7,10 @@
 3) Install laravel file manager package for awesome folder structuring
 4) Install tinymc editor for nice editor panel
 5) Install lararvel collective form
+
+
+
+
+
+=========Login page change================
+RouteServiceProvider a jaia redirect home theke admin/dashboard kore dce 
