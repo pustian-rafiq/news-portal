@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Category\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +14,8 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/',[DashboardController::class, 'dashboard']);
+Route::get('/',[DashboardController::class, 'dashboard']);\
+//Category Routes here
+Route::get('/category-list',[CategoryController::class, 'index'])->name('category.index');
+Route::get('/category-create',[CategoryController::class, 'createCategory'])->name('category.create');
+Route::get('/category-edit',[CategoryController::class, 'editCategory'])->name('category.edit');

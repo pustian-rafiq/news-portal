@@ -11,6 +11,9 @@
     <script src="{{ asset('admin/assets/js/lib/vector-map/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/lib/vector-map/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('admin/assets/js/lib/vector-map/country/jquery.vmap.world.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/lib/data-table/datatables.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/lib/data-table/dataTables.bootstrap.min.js') }}"></script>
+
     <script>
         ( function ( $ ) {
             "use strict";
@@ -28,4 +31,10 @@
                 normalizeFunction: 'polynomial'
             } );
         } )( jQuery );
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#data-table').DataTable();
+        } );
     </script>

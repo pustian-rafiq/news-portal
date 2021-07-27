@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/cs-skin-elastic.css')}}">
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+     <link rel="stylesheet" href="{{ asset('admin/assets/css/lib/datatable/dataTables.bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/scss/style.css')}}">
     <link href="{{ asset('admin/assets/css/lib/vector-map/jqvmap.min.css')}}" rel="stylesheet">
 
