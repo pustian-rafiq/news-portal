@@ -14,8 +14,17 @@ use App\Http\Controllers\Category\CategoryController;
 |
 */
 
-Route::get('/',[DashboardController::class, 'dashboard']);\
-//Category Routes here
-Route::get('/category-list',[CategoryController::class, 'index'])->name('category.index');
-Route::get('/category-create',[CategoryController::class, 'createCategory'])->name('category.create');
-Route::get('/category-edit',[CategoryController::class, 'editCategory'])->name('category.edit');
+Route::group(['as'=>'admin.','prefix'=>'admin','middleware' => 'auth'], function(){
+
+	Route::get('/dashboard',[DashboardController::class, 'dashboard'])->name('dashboard');
+	//Category Routes here
+	Route::get('/category-list',[CategoryController::class, 'index'])->name('category.index');
+	Route::get('/category-create',[CategoryController::class, 'createCategory'])->name('category.create');
+	Route::get('/category-edit',[CategoryController::class, 'editCategory'])->name('category.edit');
+
+});
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

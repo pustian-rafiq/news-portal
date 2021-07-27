@@ -5,4 +5,5 @@
 1) Admin theme setup
 2) Install image intervention package for image
 3) Install laravel file manager package for awesome folder structuring
-4) Install laravel Ckeditor for nice editor panel
+4) Install tinymc editor for nice editor panel
+5) Install lararvel collective form
